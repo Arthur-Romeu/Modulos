@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    const Produto= {
+    id: 0,
+    title: 'short',
+    price: 100,
+    description: 'shot-jeans',
+    category: 2,
+    image: 'www.cleitinho.com'
+}
+
+fetch('https://fakestoreapi.com/products', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json'},
+    body: JSON.stringify(Produto)
+})
+
+.then((resposta) => resposta.json())
+.then(dados => console.log('Produto Criado:', dados))
+.catch(erro => console.error('Erro encontrado', erro))
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styleCalculadora.css">
+</head>
+<body>
+    <h1>Minha calculadora</h1>
+
+    <div class="calculadora">
+        <div class="calculo">
+            <p id="tamanho"></p>
+        </div>
+    <div class="organizar">
+        <button onclick="colocar(0)">0</button>
+        <button onclick="colocar(1)">1</button>
+        <button onclick="colocar(2)">2</button>
+        <button onclick="colocar(3)">3</button>
+        <button onclick="colocar(4)">4</button>
+        <button onclick="colocar(5)">5</button>
+        <button onclick="colocar(6)">6</button>
+        <button onclick="colocar(7)">7</button>
+        <button onclick="colocar(8)">8</button>
+        <button onclick="colocar(9)">9</button>  
+
+        <div class="organizar2">
+        <button onclick="colocar('+')">+</button>
+        <button onclick="colocar('-')">-</button>
+        <button onclick="colocar('*')">*</button>
+        <button onclick="colocar('/')">/</button>
+        <button id="igual" onclick="calcular('=')">=</button>
+    </div>
+
+    </div>
+    
+    <div id="apagar">
+        <button onclick="limpar('C')">C</button>
+    </div>
+    </div>
+
+    <script src="Calculadora.js"></script>
+</body>
+</html>

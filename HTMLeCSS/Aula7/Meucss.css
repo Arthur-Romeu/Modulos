@@ -1,0 +1,46 @@
+header, footer{
+    background-color: lightgray;
+}
+
+main{
+    background-color: darkgray;
+    margin: 15px;
+}
+
+header, footer, main{
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+header{
+    padding: 20px 40px;
+}
+
+footer{
+    margin: 15px 40px;
+    padding: 10px;
+}
+
+.oculto{
+    display: none;
+}
+
+#introducao, #conteudo-principal{
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    vertical-align: top ;
+    background-color: rgba(65, 105, 225, 0.165);
+}
+
+#imagens, #exemplo-display{
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    margin: 20px;
+    vertical-align: bottom ;
+    background-color: rgba(65, 105, 225, 0.165);
+}
+
+
