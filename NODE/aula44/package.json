@@ -1,0 +1,12 @@
+{
+  "name": "aula44",
+  "version": "1.0.0",
+  "description": "Segunda aula de Node.js com o metodo http e correcao das atividades com o metodo fs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Arthur Romeu",
+  "license": "ISC"
+}
