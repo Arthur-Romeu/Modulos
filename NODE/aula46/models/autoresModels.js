@@ -1,6 +1,6 @@
 // importar os arquivos do sequelize e o DataTypes
 
-const sequelize = require('./model/sequelize')
+const sequelize = require('./sequelize')
 const { DataTypes } = require('sequelize')
 
 const autoresModel = sequelize.define('autores', {

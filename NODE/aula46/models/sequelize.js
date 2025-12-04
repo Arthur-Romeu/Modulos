@@ -6,7 +6,7 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize('livraria', 'root', 'arthur2025', {
     host: 'localhost',
     dialect: 'mysql',
-    port: '3306'
+    port: 3306
 })
 
 module.exports = sequelize

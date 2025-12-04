@@ -1,12 +1,12 @@
-const sequelize = require('./model/sequelize')
-const { DataTypes, Model, BelongsTo } = require('sequelize')
+const sequelize = require('./sequelize.js')
+const { DataTypes, HasMany } = require('sequelize')
 
 // importar as exportações
 
 const autoresModels = require('./autoresModels')
 const categoriasModels = require('./categoriasModels')
 
-const livrosModel = sequelize.define('livros', {
+const livrosModels = sequelize.define('livros', {
     idLivros: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -15,7 +15,7 @@ const livrosModel = sequelize.define('livros', {
 
     titulo: {
         type: DataTypes.STRING(100),
-        allowNull
+        allowNull: false
     },
 
     ano_publicidade: {
@@ -47,19 +47,20 @@ const livrosModel = sequelize.define('livros', {
 
     categorias: {
         type: DataTypes.STRING(100),
-        allowNull
+        allowNull: false
     },
 
     autores: {
         type: DataTypes.STRING(100),
-        allowNull
+        allowNull: false
     },
 })
 
-livrosModel.BelongsTo(autoresModels)
-livrosModel.BelongsTo(categoriasModels)
+autoresModels.hasMany(livrosModels)
+livrosModels.belongsTo(autoresModels)
 
-autoresModels.hasMany(livrosModel)
-categoriasModels.hasMany(livrosModel)
+livrosModels.hasOne(categoriasModels)
+categoriasModels.hasOne(livrosModels)
 
-module.exports = livrosModel
+
+module.exports = livrosModels

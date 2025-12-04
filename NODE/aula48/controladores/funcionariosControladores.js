@@ -1,0 +1,1 @@
+// na pasta controladores, crie o arquivo clientesControlador.js e o arquivo funcionariosControlador.js

@@ -1,13 +1,17 @@
-const sequelize = require('./models/sequelize')
+const sequelize = require('./models/sequelize.js')
+const autoresModels = require('./models/autoresModels.js')
+const categoriasModels = require('./models/categoriasModels.js')
+const livrosModels = require('./models/livrosModels.js')
 
 sequelize.authenticate()
-
     .then(() => {
-        sequelize.sync().then(() => {
-            console.log('Tabelas criadas com Sucesso!')
+        console.log('Conectado com o banco de dados.')
+
+        sequelize.sync({ alter: true }).then(() => {
+            console.log('Tabelas sicronizdas com Sucesso!')
         })
     })
 
     .catch((erro) => {
-        console.log('Erro ao se conectar ao banco de dados' + erro)
+        console.log('O banco de dados não foi conectado!' + erro)
     })
