@@ -1,0 +1,17 @@
+//importar o controlador
+const loginController = require('../Controladores/loginController')
+const autenticacao = require('../middleware/autenticacao')
+
+//importar o express e criar uma instância do router
+const express = require('express')
+const rotasLogin = express.Router()
+
+
+//rotas para login
+//rotas sem middleware
+//(rota, controlador)
+rotasLogin.post('/', autenticacao, loginController)
+
+
+//exportar as rotas de login
+module.exports = rotasLogin
